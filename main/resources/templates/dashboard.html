@@ -1,0 +1,280 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body class="dashboard">
+    <nav class="navbar navbar-expand-lg bg-light py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand sm-3" href="#" style="color:black;">FLEXRIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/front}" style="color:black">Home</a>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/Cardetails}" style="color:black;">Car</a>
+                            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/index}" style="color:black;">Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" th:href="@{/front}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <div class="container">
+        <div><p><h3 style="color:beige;">Admin Dashboard</h3></p></div>
+        <p><h4 style="color:beige;">Rides:</h4></p>
+        <table class="table table-info table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">Sl. No.</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Model No.</th>
+                  <th scope="col">Approve Request </th>
+                  <th scope="col">Reject Request</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <th scope="col"><button class="btn btn-success">Approve Ride</button></th>
+                  <th scope="col"><button class="btn btn-danger">Cancel Ride</button></th>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <th scope="col"><button class="btn btn-success">Approve Ride</button></th>
+                  <th scope="col"><button class="btn btn-danger">Cancel Ride</button></th>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <th scope="col"><button class="btn btn-success">Approve Ride</button></th>
+                  <th scope="col"><button class="btn btn-danger">Cancel Ride</button></th>
+                </tr>
+              </tbody>
+          </table>
+       
+          </div>
+
+ 
+ <div class="container">
+        <h2>Admin Dashboard</h2>
+        <p class="welcome">Welcome, <span th:text="${name}"></span>!</p>
+        
+        <div class="logout">
+            <form th:action="@{/logout}" method="post">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  -->
+  
+  
+  
+  
+  
+<!-- <!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="dashboard">
+    <nav class="navbar navbar-expand-lg bg-light py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand sm-3" href="#" style="color:black;">FLEXRIDE</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/front}" style="color:black">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/car/list}" style="color:black;">Car</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/index}" style="color:black;">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/logout}" style="color:red;">LogOut</a></li>
+                    <li class="nav-item">
+                          <form th:action="@{/logout}" method="post">
+                        </form>
+                        	     
+                        <a class="btn btn-danger" th:href="@{/logout}">Logout</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h3>Admin Dashboard</h3>
+        <h4>Rides:</h4><p th:text="@{name}">John</p>
+        
+        
+        <table class="table table-info table-striped">
+            <thead>
+                <tr>
+                    <th>Sl. No.</th><th>Name</th><th>Email</th><th>Address</th><th>Model No.</th><th>Approve</th><th>Reject</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="ride, index : ${rides}">
+                    <td th:text="${index.count}"></td>
+                    <td th:text="${ride.name}"></td>
+                    <td th:text="${ride.email}"></td>
+                    <td th:text="${ride.address}"></td>
+                    <td th:text="${ride.model}"></td>
+                    <td><button class="btn btn-success">Approve</button></td>
+                    <td><button class="btn btn-danger">Cancel</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+<h3 class="mt-4">Booking Details</h3>
+       <table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Booking ID</th>
+            <th>User ID</th>
+            <th>Address</th>
+            <th>Car ID</th>
+            <th>Price Per Day</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="booking : ${bookings}">
+            <td th:text="${booking.id}"></td>
+            <td th:text="${booking.user.id}"></td>
+            <td th:text="${booking.address}"></td>
+            <td th:text="${booking.car.id}"></td>
+            <td th:text="${booking.pricePerDay}"></td>
+        </tr>
+    </tbody>
+</table>
+
+        <a th:href="@{/car/booking}" class="btn btn-primary">Go to Booking Page</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </body>
+</html>
+
+ -->
+
+
+
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FLEXRIDE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .dashboard-container {
+            max-width: 900px;
+            margin: auto;
+            padding-top: 30px;
+        }
+        .table {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+   
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FLEXRIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/car/list}">Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/index}">Collection</a></li>
+                    <li class="nav-item"><a class="btn btn-danger btn-sm ms-2" th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <h2 class="text-center mb-4">Admin Dashboard</h2>
+
+        <!-- Booking Details -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Booking Details</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>User ID</th>
+                            <th>Address</th>
+                            <th>Car ID</th>
+                            <th>Price Per Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="booking : ${bookings}">
+                            <td th:text="${booking.id}"></td>
+                            <td th:text="${booking.user.id}"></td>
+                            <td th:text="${booking.address}"></td>
+                            <td th:text="${booking.car.id}"></td>
+                            <td th:text="${booking.pricePerDay}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a th:href="@{/car/booking}" class="btn btn-primary mt-3">Go to Booking Page</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

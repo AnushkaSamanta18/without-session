@@ -1,0 +1,846 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book</title>
+    Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    Custom CSS
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('https://www.topgear.com/sites/default/files/news-listicle/image/2018/09/new_speed_record_for_specially_prepared_beetle_lsr_-13591.jpg?w=848&h=477') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .navbar,
+        .footer {
+            background-color: rgb(255, 0, 0);
+        }
+
+        .hero-section {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 0;
+        }
+
+        .hero-section h1,
+        .hero-section p,
+        .footer {
+            color:white;
+        }
+
+        .contact-box {
+            background-color: rgba(191, 184, 184, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    Navbar
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color:black;">FLEXRIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <img src="assets/profile-user.png" alt="User" style="width:20px; height:20px; border-radius:40%;">
+                          
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" th:href="@{/front}">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    Contact Us Section
+    <header class="hero-section text-center text-white">
+        <div class="container">
+            <h1 class="display-4" style="color:white;">Enjoy Your Ride</h1>
+            <p>Fill the form below! Get in touch with us.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="contact-box">
+                        <form id="form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label" style="color:black">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label" style="color:black">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone number" class="form-label" style="color:black">Phone Number</label>
+                                <input type="phone number" class="form-control" id="phone number" placeholder="Enter your phone number">
+                            </div>
+                            <div class="mb-3">
+                                <label for="drivingLicense" class="form-label" style="color:black">Driving License</label>
+                                <input type="text" class="form-control" id="drivingLicense" placeholder="Enter your 14-digit driving license">
+                                <form>
+                                    <label for="drivingLicense" class="form-label" style="color:black">Driving License</label>
+                                    <input type="text" class="form-control" id="charField" maxlength="14"  placeholder="Enter your 14-digit driving license">
+                                    <span id="error"></span>
+                                </form>
+                            </div>
+                           
+                            <div class="mb-3">
+                                <label for="enter your address" class="form-label" style="color:black">Enter your Address</label>
+                                <input type="enter your address" class="form-control" id="enter your address" placeholder="Enter your address">
+                            </div>
+                            <div class="mb-3">
+                                <label for="carModel" class="form-label" style="color:black">Car Name</label>
+                                <select class="form-select" id="carModel">
+                                    <option selected>Select your car model</option>
+                                    <option value="Car1">Mahindra Thar</option>
+                                    <option value="Car2">Mahindra Scorpio</option>
+                                    <option value="Car3">Honda Amaze</option>
+                                    <option value="Car3">Audi Q7</option>
+                                    <option value="Car3">Hyundai Verna</option>
+                                    <option value="Car3">Skoda Slavia</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="carModel" class="form-label" style="color:black">Model</label>
+                                <select class="form-select" id="carModel">
+                                    <option selected>Select your car model</option>
+                                    <option value="Car1">Mahindra Thar</option>
+                                    <option value="Car2">Mahindra Scorpio</option>
+                                    <option value="Car3">Honda Amaze</option>
+                                    <option value="Car3">Audi Q7</option>
+                                    <option value="Car3">Hyundai Verna</option>
+                                    <option value="Car3">Skoda Slavia</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="carModel" class="form-label" style="color:black">Company</label>
+                                <select class="form-select" id="carModel">
+                                    <option selected>Select your car model</option>
+                                    <option value="Car1">Mahindra Thar</option>
+                                    <option value="Car2">Mahindra Scorpio</option>
+                                    <option value="Car3">Honda Amaze</option>
+                                    <option value="Car3">Audi Q7</option>
+                                    <option value="Car3">Hyundai Verna</option>
+                                    <option value="Car3">Skoda Slavia</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="enter your address" class="form-label" style="color:black">Date</label>
+                                <input type="date" id="fromDate" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fromDate" class="form-label" style="color:black">Date</label>
+                                <input type="date" id="fromDate" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fromTime" class="form-label" style="color:black">Start Time</label>
+                                <input type="time" id="fromTime" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="toTime" class="form-label" style="color:black">End Time</label>
+                                <input type="time" id="toTime" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label" style="color:black">Suggestion</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Write your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Book</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Car ID</th>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Company</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.id}"></td>
+            <td th:text="${car.name}"></td>
+            <td th:text="${car.model}"></td>
+            <td th:text="${car.company}"></td>
+            <td>
+                <a th:href="@{/bookings/book/{userId}/{carId}(userId=${user.id}, carId=${car.id})}" 
+                   class="btn btn-danger">Book</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    Footer
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 . All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script2.js"></script>
+</body>
+
+</html>
+
+
+
+ -->
+<!-- <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Available Cars</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Company</th>
+                    <th>Price Per Day</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="car : ${carsList}">
+                    <td th:text="${car.id}"></td>
+                    <td th:text="${car.name}"></td>
+                    <td th:text="${car.model}"></td>
+                    <td th:text="${car.company}"></td>
+                    <td th:text="${car.pricePerDay}"></td>
+                    <td>
+                        <form th:action="@{/car/book/{id}(id=${car.id})}" method="post">
+                            <input type="hidden" name="userId" th:value="${user.id}">
+                            <button type="submit" class="btn btn-primary">Book</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color:light;">FLEXRIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <img th:src="@{/images/profile-user.png}" alt="User" style="width:20px; height:20px; border-radius:40%;">
+                          
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" th:href="@{/front}">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 class="display-4" style="color:info;">Enjoy Your Ride</h1>
+    <div class="container mt-5" >
+        <h2 class="text-center">Available Cars</h2>
+
+        Show message if no cars are available
+        <div th:if="${carsList == null or carsList.isEmpty()}" class="alert alert-warning text-center">
+            No cars available at the moment.
+        </div>
+
+        <table th:if="${carsList != null and not carsList.isEmpty()}" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Company</th>
+                    <th>Price Per Day</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="car : ${carsList}">
+                    <td th:text="${car.id}"></td>
+                    <td th:text="${car.name}"></td>
+                    <td th:text="${car.model}"></td>
+                    <td th:text="${car.company}"></td>
+                    <td th:text="${car.pricePerDay}"></td>
+                    <td>
+                        <form th:action="@{/car/book/{id}(id=${car.id})}" method="post">
+                            Ensure user is present before setting hidden input
+                            <input type="hidden" name="userId" th:if=${user!=null} th:value="${user.id}">
+                            <input type="hidden" name="userId"  th:value="${user?.id}"/>
+                            <input type="hidden" name="userId" th:value="${session.userId}" />
+                            
+                            <button type="submit" class="btn btn-primary">Book</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 . All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking - FLEXRIDE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x500/?luxury-car') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+        }
+
+        .table thead {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+            transition: 0.3s;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    Navbar
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">FLEXRIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img th:src="@{/images/profile-user.png}" alt="User" class="profile-img">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-danger ms-2" th:href="@{/front}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    Hero Section
+    <section class="hero text-center">
+        <h1 class="display-4">Book Your Dream Ride</h1>
+    </section>
+
+    Car Listing Table
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Available Cars</h2>
+
+        Show message if no cars are available
+        <div th:if="${carsList == null or carsList.isEmpty()}" class="alert alert-warning text-center">
+            No cars available at the moment.
+        </div>
+
+        <table th:if="${carsList != null and not carsList.isEmpty()}" class="table table-bordered table-hover text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Company</th>
+                    <th>Price Per Day</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="car : ${carsList}">
+                    <td th:text="${car.id}"></td>
+                    <td th:text="${car.name}"></td>
+                    <td th:text="${car.model}"></td>
+                    <td th:text="${car.company}"></td>
+                    <td class="fw-bold text-primary">₹ <span th:text="${car.pricePerDay}"></span> / day</td>
+                    <td>
+                        <form th:action="@{/car/book/{id}(id=${car.id})}" method="post">
+                            <input type="hidden" name="userId" th:value="${session.userId}" />
+                            <button type="submit" class="btn btn-info">Book</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    Footer
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; 2025 FLEXRIDE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+ -->
+
+
+
+<!-- main -->
+
+<!-- <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking - FLEXRIDE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x500/?luxury-car') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+        }
+
+        .table thead {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+            transition: 0.3s;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+    
+    <script>
+        function showBookingPopup() {
+            alert("Your car has been booked successfully!");
+        }
+    </script>
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">FLEXRIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img th:src="@{/images/profile-user.png}" alt="User" class="profile-img">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-danger ms-2" th:href="@{/front}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    Hero Section
+    <section class="hero text-center">
+        <h1 class="display-4">Book Your Dream Ride</h1>
+    </section>
+
+    Car Listing Table
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Available Cars</h2>
+
+        Show message if no cars are available
+        <div th:if="${carsList == null or carsList.isEmpty()}" class="alert alert-warning text-center">
+            No cars available at the moment.
+        </div>
+
+        <table th:if="${carsList != null and not carsList.isEmpty()}" class="table table-bordered table-hover text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Company</th>
+                    <th>Price Per Day</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="car : ${carsList}">
+                    <td th:text="${car.id}"></td>
+                    <td th:text="${car.name}"></td>
+                    <td th:text="${car.model}"></td>
+                    <td th:text="${car.company}"></td>
+                    <td class="fw-bold text-primary">₹ <span th:text="${car.pricePerDay}"></span> / day</td>
+                    <td>
+                        <form th:action="@{/book/{id}(id=${car.id})}" method="post" onsubmit="showBookingPopup(event)">
+                            <input type="hidden" name="userId" th:value="${session.userId}" />
+                            <button type="submit" class="btn btn-info">Book</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+         Display Success Message
+    <p th:if="${bookingSuccess}" style="color: green;">[[${bookingSuccess}]]</p>
+
+    Display Error Message
+    <p th:if="${bookingError}" style="color: red;">[[${bookingError}]]</p>
+    </div>
+
+    Booking Confirmation Popup
+    <div id="bookingPopup" class="modal" tabindex="-1" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking Confirmation</h5>
+                    <button type="button" class="btn-close" onclick="closePopup()"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your car has been booked successfully!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closePopup()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Footer
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; 2025 FLEXRIDE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+ -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Car</title>
+    <script>
+        function showBookingPopup() {
+            alert("Your car has been booked successfully!");
+        }
+    </script>
+</head>
+<body>
+    <h2>Available Cars</h2>
+    
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Company</th>
+            <th>Price Per Day</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="car : ${carsList}">
+            <td th:text="${car.id}"></td>
+            <td th:text="${car.name}"></td>
+            <td th:text="${car.model}"></td>
+            <td th:text="${car.company}"></td>
+            <td th:text="${car.pricePerDay}"></td>
+            <td>
+                <form th:action="@{/car/book/{carId}(carId=${car.id})}" method="post">
+                    <input type="hidden" name="userId" th:value="${users.id}" />
+                    <button type="submit" onclick="showBookingPopup()">Book</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    Display Success Message
+    <p th:if="${bookingSuccess}" style="color: green;">[[${bookingSuccess}]]</p>
+
+    Display Error Message
+    <p th:if="${bookingError}" style="color: red;">[[${bookingError}]]</p>
+
+</body>
+</html>
+
+
+
+ -->
+ 
+ 
+ 
+ 
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking - FLEXRIDE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x500/?luxury-car') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+        }
+
+        .table thead {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+            transition: 0.3s;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+    
+    <script>
+        function showBookingPopup(event) {
+            event.preventDefault();  // Prevent form submission before alert
+            alert("Your car has been booked successfully!");
+            event.target.submit();   // Submit the form after alert
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">FLEXRIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img th:src="@{/images/profile-user.png}" alt="User" class="profile-img">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-danger ms-2" th:href="@{/front}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <h1 class="display-4">Book Your Dream Ride</h1>
+    </section>
+
+    <!-- Car Listing Table -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Available Cars</h2>
+
+        <!-- Show message if no cars are available -->
+        <div th:if="${carsList == null or carsList.isEmpty()}" class="alert alert-warning text-center">
+            No cars available at the moment.
+        </div>
+
+        <table th:if="${carsList != null and not carsList.isEmpty()}" class="table table-bordered table-hover text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Company</th>
+                    <th>Price Per Day</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="car : ${carsList}">
+                    <td th:text="${car.id}"></td>
+                    <td th:text="${car.name}"></td>
+                    <td th:text="${car.model}"></td>
+                    <td th:text="${car.company}"></td>
+                    <td class="fw-bold text-primary">₹ <span th:text="${car.pricePerDay}"></span> / day</td>
+                    <td>
+                        <form th:action="@{/car/book/{carId}(carId=${car.id})}" method="post" onsubmit="showBookingPopup(event)">
+                            <input type="hidden" name="userId" th:value="${session.userId}" />
+                            <button type="submit" class="btn btn-info">Book</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Display Success Message -->
+        <div th:if="${bookingSuccess}" class="alert alert-success text-center mt-3">
+            [[${bookingSuccess}]]
+        </div>
+
+        <!-- Display Error Message -->
+        <div th:if="${bookingError}" class="alert alert-danger text-center mt-3">
+            [[${bookingError}]]
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; 2025 FLEXRIDE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
